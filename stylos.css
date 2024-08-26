@@ -1,0 +1,107 @@
+body {
+    background-image: url(https://venngage-wordpress.s3.amazonaws.com/uploads/2018/11/15-Presentation-Background-Examples16.jpeg);
+    background-size: 100px 300px;
+    background-repeat: repeat-x;
+    background-position: center;
+}
+
+#titulo {
+    color: aqua;
+}
+
+p.especial {
+    color: blueviolet;
+}
+
+.texto {
+    color: black;
+}
+
+div p,
+div h3 {
+    color: blue;
+}
+
+* {
+    font-size: 24px;
+}
+
+.color {
+    border-style: solid;
+    border-color: brown;
+    border-radius: 5px;
+    border-width: 10px;
+}
+
+.hl {
+    color: black;
+    background-color: orange;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    width: 50px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.deco {
+    font-family: 'Roboto Mono', monospace;
+    width: 50%;
+    text-align: center;
+    font-size: 30px;
+    color: black;
+}
+
+a:link {
+    color: red;
+}
+
+a:after {
+    color: burlywood;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: aqua;
+}
+
+ul {
+    background-color: blueviolet;
+    list-style-type: georgian;
+    /* list-style-type: none;
+    padding-left: 0; */
+    /* list-style-position: inside; */
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td,
+th {
+    font-weight: bold;
+    border: 2px black solid;
+    font-family: 'Roboto Mono', monospace;
+    padding: 5px;
+}
+
+th {
+    color: white;
+    background-color: tomato;
+}
+
+tr:nth-child(even){
+    background-color: blanchedalmond;
+}
+tr:hover{
+    background-color:coral;
+    cursor: pointer;
+}
+
+.inline{
+    display: inline;
+}

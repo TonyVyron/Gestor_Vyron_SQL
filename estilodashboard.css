@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+:root {
+    --main-color: linear-gradient(#1d2231e7, #172961ec), url('https://static.vecteezy.com/system/resources/previews/001/434/972/non_2x/dark-purple-background-with-wry-lines-vector.jpg');
+    --color-dark: aliceblue;
+    --text-grey: #8390A2;
+}
+
+body {
+    background-image: url('IMG/Imagen1.png');
+}
+
+.sidebar {
+    padding-top: 10px;
+    text-align: center;
+    width: 345px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--main-color);
+    background-size: cover;
+    z-index: 100;
+    transition: width 300ms;
+    overflow-y: auto;
+    /* Agregar barra de desplazamiento vertical si el contenido supera la altura del elemento */
+}
+
+#nav-toggle:checked+.sidebar {
+    width: 100px;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand,
+#nav-toggle:checked+.sidebar li {
+    padding-left: 1rem;
+    text-align: center;
+}
+
+#nav-toggle:checked+.sidebar li a {
+    padding-left: 0rem;
+}
+
+#nav-toggle:checked+.sidebar .sidebar-brand h2 span:last-child,
+#nav-toggle:checked+.sidebar li a span:last-child {
+    display: none;
+}
+
+#nav-toggle:checked~.main-content {
+    margin-left: 100px;
+}
+
+#nav-toggle:checked~.main-content header {
+    width: calc(100% - 100px);
+    left: 100px;
+}
+
+.main-content {
+    transition: margin-left 300ms;
+    margin-left: 345px;
+}
+
+header {
+    background:  linear-gradient(to right,#1d2231e7, #172961ec), url('https://static.vecteezy.com/system/resources/previews/001/434/972/non_2x/dark-purple-background-with-wry-lines-vector.jpg');
+    display: flex;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 345px;
+    width: calc(100% - 345px);
+    top: 0;
+    z-index: 100;
+    transition: left 300ms;
+}
+
+main {
+    margin-top: 15px;
+    padding: 2rem 1.5rem;
+    min-height: calc(100vh - 90px);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+#titulo {
+    font-size: 38px;
+    color: aliceblue;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#bd {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#subti {
+    margin-left: 5px;
+    font-size: 18px;
+    display: inline-block;
+    color: aliceblue;
+}
+
+#barras {
+    color: aliceblue;
+}
+
+#muestra {
+    padding: 10px;
+    text-align: left;
+    color: aliceblue;
+}
+
+
+#AgregarBD {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding: 30px;
+    border: 1px rgba(0, 0, 0, 0.153) solid;
+    box-shadow: 3px 8px 16px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    color: black;
+    background-color: #1d22310e;
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    background-image: url('searchicon.png');
+    box-sizing: border-box;
+}
+
+input[type=text]:focus {
+    border: 3px solid #1D2231;
+}
+
+#tit {
+    color: rgb(4, 102, 4);
+}
+
+button {
+    cursor: pointer;
+    background-color: rgb(4, 102, 4);
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 8px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+#cen {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#bdab {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    background-color: white;
+    padding: 30px;
+    top: 50%;
+    left: 24%;
+    /* display: none; */
+    border: 1px rgba(0, 0, 0, 0.153) solid;
+    box-shadow: 3px 8px 16px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#consulta {
+    width: 100%;
+    font-size: 16px;
+    resize: none;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+}
+
+#Errores {
+    border-radius: 15px;
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(255, 0, 0, 0.397);
+}
+
+#True {
+    border-radius: 15px;
+    border: 2px solid #ccc;
+    width: 100%;
+    padding: 15px;
+
+}
+
+#verde {
+    border-radius: 10px;
+    background-color: rgba(56, 252, 56, 0.651);
+    width: 100%;
+    padding: 15px;
+}
+
+#padd {
+    margin-left: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#nu {
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+#b {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#a {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+a {
+    cursor: pointer;
+    color: rgb(79, 27, 127);
+    /* color: rgb(134, 30, 30); */
+}
+
+#agregartab {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding: 25px;
+    background-color: #1d223111;
+    border: 1px rgba(0, 0, 0, 0.153) solid;
+    box-shadow: 3px 8px 16px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.inptb {
+    width: 16%;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inptb2 {
+    margin-top: 2px;
+    width: 25%;
+    margin-right: 5px;
+    background-color: white;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#line {
+    width: 16%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#line2 {
+    margin-left: 5px;
+    width: 25%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#titag {
+    font-size: 25px;
+    color: rgb(4, 102, 4);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.caja {
+    border: 1px solid #d9d9d9;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    width: 15%;
+    border-radius: 15px;
+    position: relative;
+}
+
+select {
+    padding: 10px;
+    width: 100%;
+    border-radius: 15px;
+    border: none;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+select:focus {
+    outline: none;
+}
+
+.caja::after {
+    content: "\025be";
+    display: table-cell;
+    padding-top: 12px;
+    text-align: center;
+    width: 30px;
+    height: 35px;
+    background-color: #d9d9d9;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    pointer-events: none;
+}
+
+#tablas {
+    margin-top: 10px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    background-color: #152860;
+}
+
+#flotante {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    padding: 30px;
+    border: 1px rgba(0, 0, 0, 0.034) solid;
+    box-shadow: 3px 8px 16px 0 rgba(0, 0, 0, 0.2), 3px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#divisor {
+    width: 49%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#divisor2 {
+    position: relative;
+    float: right;
+}
+
+.linea {
+    width: 33%;
+    margin-bottom: 8px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.linea2 {
+    width: 32.5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 8px;
+    color: white;
+    border-radius: 20px;
+    background-color: #1D2231;
+    text-align: center;
+    margin-right: 2px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+img {
+    cursor: pointer;
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav__link {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+.nav__link--inside {
+    border-radius: 6px;
+    padding-left: 25px;
+    text-align: left;
+}
+
+.nav__link--inside:hover {
+    color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('IMG/Imagen1.png');
+}
+
+.list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0 16px 16px 0;
+}
+
+.list__item {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.list__item--click {
+    cursor: pointer;
+}
+
+.list__button {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.arrow .list__arrow {
+    transform: rotate(90deg);
+}
+
+.list__arrow {
+    margin-left: auto;
+    transition: transform .3s;
+}
+
+.list__show {
+    width: 100%;
+    margin-left: 25px;
+    border-left: 3px solid white;
+    list-style: none;
+    font-size: 17px;
+    transition: height .4s;
+    height: 0;
+}
+
+
+#subtito {
+    font-size: 18px;
+    color: white;
+}
+
+.my-element {
+    animation: zoomIn;
+    animation-duration: 0.5s;
+  }
